@@ -1,0 +1,93 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts - MyRent-WebIQ</title>
+    <!-- Link to the separate CSS file -->
+    <link rel="stylesheet" href="css/contacts.css">
+    <!-- Font Awesome for Contact & Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">myRent-WebIQ</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                
+                <!-- Dropdown Menu -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Pages &#9660;</a>
+                    <div class="dropdown-content">
+                        <!-- <a href="about.html">About Us</a> -->
+                        <a href="services.html">Services</a>
+                        <a href="contacts.html" class="active">Contacts</a>
+                    </div>
+                </li>
+
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Contacts Content -->
+    <main class="contacts-container">
+        <div class="contacts-card">
+            <h1>Get in Touch With Us</h1>
+            <p class="subtitle">Reach out through any of our channels below.</p>
+
+            <!-- Direct Contact Info -->
+            <section class="info-section">
+                <h2>Direct Contact</h2>
+                
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone icon phone-icon"></i>
+                    <div class="contact-text">
+                        <span class="label">Phone</span>
+                        <a href="tel:+254707995754">+254 707995754</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope icon email-icon"></i>
+                    <div class="contact-text">
+                        <span class="label">Email</span>
+                        <a href="mailto:info@iqmyrent.com">info@iqmyrent.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-brands fa-whatsapp icon whatsapp-icon"></i>
+                    <div class="contact-text">
+                        <span class="label">WhatsApp</span>
+                        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <!-- Social Media Links -->
+            <section class="social-section">
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-btn instagram">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-btn facebook">
+                        <i class="fa-brands fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer" class="social-btn tiktok">
+                        <i class="fa-brands fa-tiktok"></i> TikTok
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>

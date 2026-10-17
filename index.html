@@ -1,0 +1,105 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Website</title>
+    <!-- Linking the separate CSS file -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">myRent-WebIQ</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                
+                <!-- Dropdown Menu -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Pages &triangledown;</a>
+                    <div class="dropdown-content">
+                        <!-- <a href="about.html">About Us</a> -->
+                        <a href="services.html">Services</a>
+                        <a href="contacts.html">Contacts</a>
+                    </div>
+                </li>
+
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slideshow Section -->
+    <main>
+        <section class="slider-container">
+            <!-- Slide 1 -->
+            <div class="slide fade">
+                <img src="img/dashboard.png" alt="Nature Landscape">
+                <div class="slide-text">Welcome to myRentIq</div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide fade">
+                <img src="img/dashboard.jpg" alt="myRentIq Dashboard">
+                <div class="slide-text">Simple and easy to use dashboard</div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide fade">
+                <img src="img/payments.jpg" alt="Aero view of nature">
+                <div class="slide-text">Easier rental payments management</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="img/report.jpg" alt="Aero view of nature">
+                <div class="slide-text">Generate monthly reports</div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </section>
+
+        <!-- Welcome Content Area -->
+        <section class="content">
+            <h1>The doctor of rental payments and property management records</h1>
+            <p>Visit our other pages on the website to learn more about us and communicate with us</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MyRent-WebIQ. All rights reserved.</p>
+    </footer>
+
+    <!-- Simple JavaScript for the Slideshow -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex - 1].style.display = "block";  
+        }
+
+        // Optional: Auto slide every 5 seconds
+        setInterval(() => {
+            plusSlides(1);
+        }, 5000);
+    </script>
+
+</body>
+</html>
