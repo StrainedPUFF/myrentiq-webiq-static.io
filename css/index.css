@@ -7,13 +7,76 @@
 }
 
 body {
-    background-color: #f9f9f9;
-    color: #333;
-}
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(37, 99, 235, 0.35),
+            transparent 500px
+        ),
 
+        radial-gradient(
+            circle at bottom right,
+            rgba(16, 185, 129, 0.30),
+            transparent 550px
+        ),
+
+        linear-gradient(
+            rgba(148, 163, 184, 0.18) 2px,
+            transparent 2px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(148, 163, 184, 0.18) 2px,
+            transparent 2px
+        ),
+
+        #f8fafc;
+
+    background-size:
+        auto,
+        auto,
+        50px 50px,
+        50px 50px;
+
+    color: #334155;
+}
 /* Navbar Styling */
 header {
-    background-color: #2c3e50;
+    /* background-color: #2c3e50; */
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(37, 99, 235, 0.35),
+            transparent 500px
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            rgba(16, 185, 129, 0.30),
+            transparent 550px
+        ),
+
+        linear-gradient(
+            rgba(148, 163, 184, 0.18) 2px,
+            transparent 2px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(148, 163, 184, 0.18) 2px,
+            transparent 2px
+        ),
+
+        #d80516;
+
+    background-size:
+        auto,
+        auto,
+        50px 50px,
+        50px 50px;
+
+    /* color: #334155; */
     color: #fff;
     position: sticky;
     top: 0;
@@ -28,12 +91,11 @@ header {
 }
 
 .logo {
-    /* font-family: 'Poppins', sans-serif; */
-    font-family: "Silkscreen", cursive;
-    font-weight: 700;
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
     font-style: normal;
     font-size: 1.5rem;
-    /* font-weight: bold; */
+    font-weight: bold;
     color: #d68205;
 }
 
@@ -96,57 +158,102 @@ header {
 
 /* Slideshow Container Styling */
 .slider-container {
-    max-width: 1000px;
+    max-width: 1100px;
     position: relative;
-    margin: 30px auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    margin: 50px auto;
+
+    border-radius: 20px;
     overflow: hidden;
-    background-color: #000;
+
+    box-shadow:
+        0 0 20px rgba(37,99,235,.3),
+        0 0 50px rgba(37,99,235,.15),
+        0 20px 60px rgba(0,0,0,.2);
 }
 
 .slide {
     display: none;
+    position: relative;
+}
+
+.slide::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15,23,42,.8),
+            rgba(15,23,42,.2),
+            transparent
+        );
 }
 
 .slide img {
     width: 100%;
-    height: 400px;
+    height: 550px;
+
     object-fit: cover;
-    vertical-align: middle;
+
+    transition:
+        transform 12s ease,
+        filter .5s ease;
 }
+.slide:hover img {
+    transform: scale(1.08);
+}
+
+
 
 /* Caption text inside slides */
 .slide-text {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    font-family: "Syne Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
+
+    bottom: 40px;
+    left: 40px;
+
+    z-index: 2;
+
+    color: white;
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    text-shadow:
+        0 4px 10px rgba(0,0,0,.5);
 }
 
 /* Next & Previous Navigation Arrows */
-.prev, .next {
-    cursor: pointer;
+.prev,
+.next {
     position: absolute;
+
     top: 50%;
     transform: translateY(-50%);
-    padding: 16px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.15);
+
+    backdrop-filter: blur(10px);
+
     color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(0,0,0,0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    transition: .3s;
+
+    cursor: pointer;
 }
 
 .next {
@@ -154,8 +261,16 @@ header {
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background: #d68205;
+    color: white;
+
+    box-shadow:
+        0 0 15px rgba(214,130,5,.5),
+        0 0 30px rgba(214,130,5,.3);
+
+    transform: translateY(-50%) scale(1.08);
 }
 
 /* Fading Animation for Slides */
