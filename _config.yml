@@ -1,6 +1,6 @@
-title: MyRent
-description: Smart Property Management
-remote_theme: pages-themes/cayman@v0.2.0
+title: MyRent-WebIQ
+description: Infoweb 
+theme: jekyll-theme-cayman
 
 plugins:
   - jekyll-remote-theme
