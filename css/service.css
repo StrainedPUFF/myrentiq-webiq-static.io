@@ -270,5 +270,8 @@ footer {
     text-align: left;
     padding: 20px 0;
     margin-top: 40px;
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-style: normal;
     /* font-size: 0.9rem; */
 }
