@@ -306,5 +306,37 @@ footer {
     font-family: "Love Ya Like A Sister", cursive;
     font-weight: 400;
     font-style: normal;
+    top: 0;
+    z-index: 1000;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(37, 99, 235, 0.35),
+            transparent 500px
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            rgba(16, 185, 129, 0.30),
+            transparent 550px
+        ),
+
+        linear-gradient(
+            rgba(148, 163, 184, 0.18) 2px,
+            transparent 2px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(148, 163, 184, 0.18) 2px,
+            transparent 2px
+        ),
+
+        #043edf;
+    background-size:
+        auto,
+        auto,
+        25px 25px,
+        25px 25px;
     /* font-size: 0.9rem; */
 }
